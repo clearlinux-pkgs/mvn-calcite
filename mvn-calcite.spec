@@ -4,12 +4,14 @@
 #
 Name     : mvn-calcite
 Version  : 1.2.0.incubating
-Release  : 1
+Release  : 2
 URL      : https://github.com/apache/calcite/archive/calcite-1.2.0-incubating.tar.gz
 Source0  : https://github.com/apache/calcite/archive/calcite-1.2.0-incubating.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/calcite/calcite-core/1.2.0-incubating/calcite-core-1.2.0-incubating.jar
 Source2  : https://repo1.maven.org/maven2/org/apache/calcite/calcite-core/1.2.0-incubating/calcite-core-1.2.0-incubating.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/calcite/calcite/1.2.0-incubating/calcite-1.2.0-incubating.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/calcite/calcite-linq4j/1.2.0-incubating/calcite-linq4j-1.2.0-incubating.jar
+Source4  : https://repo1.maven.org/maven2/org/apache/calcite/calcite-linq4j/1.2.0-incubating/calcite-linq4j-1.2.0-incubating.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/calcite/calcite/1.2.0-incubating/calcite-1.2.0-incubating.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -38,8 +40,14 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calc
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-core/1.2.0-incubating
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-core/1.2.0-incubating
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite/1.2.0-incubating
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite/1.2.0-incubating
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calcite/1.2.0-incubating
 
 
 %files
@@ -49,4 +57,6 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/calcite/calc
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/apache/calcite/calcite-core/1.2.0-incubating/calcite-core-1.2.0-incubating.jar
 /usr/share/java/.m2/repository/org/apache/calcite/calcite-core/1.2.0-incubating/calcite-core-1.2.0-incubating.pom
+/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating/calcite-linq4j-1.2.0-incubating.jar
+/usr/share/java/.m2/repository/org/apache/calcite/calcite-linq4j/1.2.0-incubating/calcite-linq4j-1.2.0-incubating.pom
 /usr/share/java/.m2/repository/org/apache/calcite/calcite/1.2.0-incubating/calcite-1.2.0-incubating.pom
