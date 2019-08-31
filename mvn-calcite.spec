@@ -4,7 +4,7 @@
 #
 Name     : mvn-calcite
 Version  : 1.2.0.incubating
-Release  : 3
+Release  : 4
 URL      : https://github.com/apache/calcite/archive/calcite-1.2.0-incubating.tar.gz
 Source0  : https://github.com/apache/calcite/archive/calcite-1.2.0-incubating.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/apache/calcite/calcite-core/1.17.0/calcite-core-1.17.0.jar
